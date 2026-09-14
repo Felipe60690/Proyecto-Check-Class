@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f8f9;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+
+padding: 45px;
+margin: 9px;
+border: 0px;
+border-radius: 124px;
+background: #022135;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}

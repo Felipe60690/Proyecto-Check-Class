@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ececec;
+    min-height:100vh;
+}
+
+/* Barra superior */
+.top-bar{
+    height:70px;
+    background:#e6e6e6;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.logo-small{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:linear-gradient(
+        to bottom,
+        #cde6f5 50%,
+        #85a500 50%
+    );
+}
+
+/* Menú */
+.menu{
+    font-size:40px;
+    cursor:pointer;
+    color:#3c4b5a;
+}
+
+/* Banner principal */
+.hero{
+    position:relative;
+    background:#002844;
+    height:160px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    overflow:hidden;
+}
+
+/* Curva inferior amarilla */
+.hero::after{
+    content:"";
+    position:absolute;
+    bottom:-90px;
+    left:-5%;
+    width:110%;
+    height:180px;
+    background:#f4b24d;
+    border-radius:50%;
+}
+
+/* Capa azul encima */
+.hero::before{
+    content:"";
+    position:absolute;
+    bottom:-70px;
+    left:-5%;
+    width:110%;
+    height:170px;
+    background:#002844;
+    border-radius:50%;
+    z-index:1;
+}
+
+.hero h1{
+    z-index:2;
+    font-size:5rem;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.hero-icon{
+    z-index:2;
+    font-size:4rem;
+    color:#f4b24d;
+    margin-left:20px;
+}
+
+/* Contenido */
+.content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:120px;
+    padding:50px;
+}
+
+/* Botones grados */
+.grades{
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+}
+
+.grades button{
+    width:150px;
+    height:120px;
+    border:none;
+    border-radius:30px;
+    background:#002844;
+    color:white;
+    font-size:4rem;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 0 2px #5e6770 inset;
+}
+
+/* Logo central */
+.center-logo{
+    font-size:22rem;
+    color:#f4b24d;
+    line-height:1;
+}
+
+/* Botón regresar */
+.back-btn{
+    position:fixed;
+    left:25px;
+    bottom:20px;
+    font-size:3rem;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .content{
+        flex-direction:column;
+        gap:50px;
+    }
+
+    .center-logo{
+        font-size:15rem;
+    }
+
+    .grades button{
+        width:120px;
+        height:90px;
+        font-size:3rem;
+    }
+}

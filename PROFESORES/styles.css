@@ -2,70 +2,66 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
     background:#ececec;
-    min-height:100vh;
-    overflow-x:hidden;
-}
-
-/* ENCABEZADO */
-
-.banner{
-    background:#002845;
-    height:160px;
-    position:relative;
     overflow:hidden;
 }
 
-.banner::after{
-    content:"";
-    position:absolute;
-    bottom:-90px;
-    left:-5%;
-    width:110%;
-    height:180px;
-    background:#f5a14a;
-    border-radius:50%;
-}
+/* HEADER */
 
-.banner::before{
-    content:"";
-    position:absolute;
-    bottom:-75px;
-    left:-5%;
-    width:110%;
-    height:170px;
+.encabezado{
+    height:120px; /* más pequeño */
     background:#002845;
-    border-radius:50%;
-    z-index:1;
+    position:relative;
 }
 
-.titulo-contenedor{
+.encabezado::before{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:110px;
+    background:#f7a04c;
+    left:-10%;
+    bottom:-65px;
+    border-radius:50%;
+}
+
+.encabezado::after{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100px;
+    background:#002845;
+    left:-10%;
+    bottom:-50px;
+    border-radius:50%;
+}
+
+.titulo-area{
     position:relative;
-    z-index:2;
+    z-index:10;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:30px;
-    padding-top:25px;
+    padding-top:10px;
 }
 
-.titulo-contenedor h1{
+h1{
     color:white;
-    font-size:85px;
+    font-size:60px;
     font-weight:900;
-    letter-spacing:3px;
 }
 
-.logo{
-    width:90px;
-    height:90px;
-    background:#062d4c;
-    color:#f5b84f;
-    font-size:60px;
+.logo-superior{
+    width:70px;
+    height:70px;
+    background:#082b4d;
+    color:#f5b347;
+    font-size:45px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -75,91 +71,60 @@ body{
 
 .contenido{
     display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:100px;
-    margin-top:30px;
+    margin-top:40px;
 }
 
-/* BOTONES */
+/* BOTONES IZQUIERDA */
 
-.niveles{
+.menu-grados{
+    margin-left:20px; /* pegados */
     display:flex;
     flex-direction:column;
     gap:55px;
 }
 
-.grado{
+.grado-btn{
     width:150px;
     height:120px;
+    border:none;
+    border-radius:28px;
     background:#002845;
     color:white;
-    border:none;
-    border-radius:25px;
-    font-size:60px;
+    font-size:55px;
     font-weight:bold;
     cursor:pointer;
-    box-shadow:0 3px 0 #7390a1;
-    transition:.3s;
 }
 
-.grado:hover{
-    transform:scale(1.05);
-    background:#00385f;
-}
-
-/* LOGO CENTRAL */
+/* LOGO GRANDE */
 
 .logo-central{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     position:relative;
 }
 
-.check-grande{
-    font-size:350px;
-    color:#f5b84f;
-    line-height:1;
-    text-shadow:2px 2px 3px rgba(0,0,0,.25);
+.circulo-check{
+    font-size:340px;
+    color:#f5b347;
 }
 
 .estrella{
     position:absolute;
-    top:40px;
-    right:70px;
-    font-size:90px;
-    color:#f5b84f;
+    top:20px;
+    right:220px;
+    color:#f5b347;
+    font-size:80px;
 }
 
 /* FLECHA */
 
 .volver{
     position:fixed;
-    left:25px;
-    bottom:20px;
-    font-size:55px;
+    left:20px;
+    bottom:10px;
     text-decoration:none;
     color:black;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-    .contenido{
-        flex-direction:column;
-        gap:30px;
-    }
-
-    .titulo-contenedor h1{
-        font-size:45px;
-    }
-
-    .check-grande{
-        font-size:220px;
-    }
-
-    .grado{
-        width:120px;
-        height:90px;
-        font-size:40px;
-    }
+    font-size:55px;
 }
